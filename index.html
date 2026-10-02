@@ -16,28 +16,160 @@
         <a href="#">Home</a>
         <a href="#">Destinations</a>
         <a href="#">About</a>
-        <button id="theme-toggle" type="button">Dark Mode</button>
+        <button id="theme-toggle" type="button" aria-pressed="false">
+          <span id="theme-icon" aria-hidden="true">🌙</span>
+          <span id="theme-label">Dark Mode</span>
+        </button>
       </nav>
     </header>
 
     <main id="main">
-      <section>
-        <h1>Travel Website</h1>
-        <p>Explore beautiful destinations and discover new places.</p>
+      <section class="hero" aria-labelledby="hero-title">
+        <img
+          src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=80"
+          alt="Beautiful mountain landscape"
+          width="800"
+          height="1000"
+        />
+
+        <header class="hero-content">
+          <h1 id="hero-title">Explore the World</h1>
+          <p>
+            Discover beautiful destinations and create unforgettable travel
+            experiences.
+          </p>
+        </header>
       </section>
+      <section class="skills" aria-labelledby="skills-title">
+        <header>
+          <h2 id="skills-title">Skills Matrix</h2>
+          <p>Technologies and tools used to build modern web experiences.</p>
+        </header>
 
-      <section>
-        <h2>Popular Destinations</h2>
+        <section class="skills-grid" aria-label="Skills by category">
+          <article class="skill-group">
+            <h3>Frontend</h3>
 
-        <article>
-          <h3>Ha Long Bay</h3>
-          <p>Discover the beauty of Ha Long Bay.</p>
-        </article>
+            <ul class="badge-list">
+              <li><span class="badge">HTML</span></li>
+              <li><span class="badge">CSS</span></li>
+              <li><span class="badge">JavaScript</span></li>
+              <li><span class="badge">React</span></li>
+            </ul>
+          </article>
 
-        <article>
-          <h3>Hoi An</h3>
-          <p>Explore the ancient town of Hoi An.</p>
-        </article>
+          <article class="skill-group">
+            <h3>Tools</h3>
+
+            <ul class="badge-list">
+              <li><span class="badge">Git</span></li>
+              <li><span class="badge">GitHub</span></li>
+              <li><span class="badge">VS Code</span></li>
+              <li><span class="badge">Figma</span></li>
+            </ul>
+          </article>
+        </section>
+      </section>
+      <section class="projects" aria-labelledby="projects-title">
+        <header>
+          <h2 id="projects-title">Projects</h2>
+          <p>Selected projects and web development work.</p>
+        </header>
+
+        <section class="projects-grid" aria-label="Project list">
+          <article class="project-card" data-category="frontend">
+            <header class="card-header">
+              <h3>Travel Website</h3>
+              <span class="badge">HTML & CSS</span>
+            </header>
+
+            <p>
+              A responsive travel website designed to showcase beautiful
+              destinations and travel experiences.
+            </p>
+
+            <footer class="card-footer">
+              <a href="#" aria-label="View Travel Website source code">
+                Source Code
+              </a>
+            </footer>
+          </article>
+
+          <article class="project-card" data-category="frontend">
+            <header class="card-header">
+              <h3>Portfolio Website</h3>
+              <span class="badge">React</span>
+            </header>
+
+            <p>
+              A modern personal portfolio focused on accessible and responsive
+              user interfaces.
+            </p>
+
+            <footer class="card-footer">
+              <a href="#" aria-label="View Portfolio Website source code">
+                Source Code
+              </a>
+            </footer>
+          </article>
+
+          <article class="project-card" data-category="tools">
+            <header class="card-header">
+              <h3>UI Design System</h3>
+              <span class="badge">Figma</span>
+            </header>
+
+            <p>
+              A reusable collection of interface components and design patterns
+              for consistent web experiences.
+            </p>
+
+            <footer class="card-footer">
+              <a href="#" aria-label="View UI Design System source code">
+                Source Code
+              </a>
+            </footer>
+          </article>
+        </section>
+      </section>
+      <section class="contact" aria-labelledby="contact-title">
+        <header>
+          <h2 id="contact-title">Contact Me</h2>
+          <p>Send a message to get in touch.</p>
+        </header>
+
+        <form id="contact-form">
+          <p>
+            <label for="name">Name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              required
+              autocomplete="name"
+            />
+          </p>
+
+          <p>
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              autocomplete="email"
+            />
+          </p>
+
+          <p>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </p>
+
+          <button type="submit">Send Message</button>
+
+          <p id="form-status" role="status" aria-live="polite"></p>
+        </form>
       </section>
     </main>
 
