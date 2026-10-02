@@ -366,3 +366,33 @@ p {
   margin-bottom: 0;
   color: var(--color-text-muted);
 }
+
+.error-state {
+  padding: var(--space-4);
+  text-align: center;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+.error-state h3 {
+  margin-bottom: var(--space-1);
+}
+
+.error-state p {
+  margin-bottom: var(--space-2);
+  color: var(--color-text-muted);
+}
+
+.error-state button {
+  padding: var(--space-1) var(--space-2);
+  font: inherit;
+  color: var(--color-primary-text);
+  background: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  cursor: pointer;
+}
+
+.error-state button:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}

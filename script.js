@@ -50,3 +50,15 @@ contactForm.addEventListener("submit", (event) => {
   formStatus.textContent = "Message sent successfully!";
   contactForm.reset();
 });
+
+const retryButton = document.getElementById("retry-button");
+
+retryButton.addEventListener("click", () => {
+  retryButton.textContent = "Retrying...";
+  retryButton.disabled = true;
+
+  setTimeout(() => {
+    retryButton.textContent = "Retry";
+    retryButton.disabled = false;
+  }, 1000);
+});
