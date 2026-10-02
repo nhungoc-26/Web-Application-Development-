@@ -1,0 +1,72 @@
+:root {
+  --color-background: #ffffff;
+  --color-surface: #f4f4f4;
+  --color-text: #1a1a1a;
+  --color-text-muted: #4a4a4a;
+  --color-primary: #075985;
+  --color-primary-text: #ffffff;
+  --color-border: #767676;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+
+  --font-family: Arial, sans-serif;
+  --line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+}
+
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+header,
+main,
+footer {
+  padding: var(--space-3);
+}
+
+nav {
+  display: flex;
+  gap: var(--space-2);
+}
+
+a {
+  color: var(--color-primary);
+}
+
+section,
+article {
+  margin-bottom: var(--space-3);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: var(--space-2);
+  top: -100px;
+  padding: var(--space-1) var(--space-2);
+  background: var(--color-primary);
+  color: var(--color-primary-text);
+}
+
+.skip-link:focus {
+  top: var(--space-1);
+}
